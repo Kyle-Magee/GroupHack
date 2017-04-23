@@ -9,3 +9,6 @@ def add_user(request):
 
 def main_page(request):
     return render(request, 'main.html')
+
+def choose_language(request):
+    return render(request, 'prolang.html')
