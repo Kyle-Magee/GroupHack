@@ -12,3 +12,6 @@ def main_page(request):
 
 def choose_language(request):
     return render(request, 'prolang.html')
+
+def interest(request):
+    return render(request, 'interests.html')
