@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import User, Language, Interest
 from .forms import UserForm, UserInterestForm, UserLanguagesForm, UserNameForm, UserEmailForm, UserProjectLevelForm
@@ -46,6 +46,8 @@ def interest(request):
         user= User(email=email_f.data['email'], languages = lang_f.data.getlist('languages'), project_level=level_f.data['project_level'], interests=inter_f.data.getlist('interests'),
                    name=name_f.data['name'])
         user.save()
+
+        return redirect(show_users)
 
     return render(request, 'interests.html', context)
 
