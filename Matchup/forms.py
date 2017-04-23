@@ -33,3 +33,4 @@ class UserProjectLevelForm(ModelForm):
     class Meta:
         model = User
         fields = ['project_level']
+

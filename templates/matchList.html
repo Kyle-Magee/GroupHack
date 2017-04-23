@@ -27,6 +27,15 @@
 <body style="background-color:gray">
   <br>
   	<div class="left-div">
+<form method="POST">
+	{% csrf_token %}
+
+	{{ inter_f }}
+	{{ lang_f }}
+	{{ p_form }}
+  <input type="submit" class="btn btn-primary" value="Submit Button">
+  </form>
+  <!---
   	  <strong><h3><font color="black">&nbsp;&nbsp;&nbsp;&nbsp;<u><em>Filter List</em></u></font></h3></strong>
 	  <form method="post">
 	      <div class="checkbox" >
@@ -49,6 +58,7 @@
 
 	      &nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" class="btn btn-info" value="Submit Button">
 	  </form>
+	-->
 	</div>
 
 	<div class="right-div">

@@ -35,11 +35,11 @@
 </head>
 
 <body style="background-color:gray">
-  <center><h1><font color="white">I'am Interested in</font></h1></center>
   <br><br><hr><br>
   <form method="POST">
+    <center>
       {% csrf_token %}
-      {{ interest_form }}
+      <p class="tab">{{ interest_form }}
       <br/>
       {{ lang_form }}
       <br/>
@@ -48,8 +48,11 @@
       {{ e_form }}
       <br/> 
       {{ p_form }}
+      </div>
+      </p>
       <input type="submit" class="btn btn-info" value="Submit Button">
   </form>
+  </center>
 </body>
 
 

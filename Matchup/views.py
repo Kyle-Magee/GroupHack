@@ -50,8 +50,26 @@ def interest(request):
     return render(request, 'interests.html', context)
 
 def show_users(request):
+    interest_form = UserInterestForm()
+    lang_form = UserLanguagesForm()
+    name_form = UserNameForm()
+    email_form = UserEmailForm()
+    level_form = UserProjectLevelForm()
     users = User.objects.all()
     context = {
-        'users':users
+        'inter_f':interest_form,
+        'lang_f':lang_form,
+        'p_form':level_form,
+        'users': users
     }
+
+
+    if request.method == 'POST':
+        inter_f = UserInterestForm(request.POST)
+        lang_f = UserLanguagesForm(request.POST)
+        level_f = UserProjectLevelForm(request.POST)
+        user = User.objects.filter(interests__interest_name__contains=inter_f.data.getlist, languages__language_name__contains=lang_f.data.getlist, project_level__contains=level_f.data.getlist)
+        context['users'] = user
+        return render(request, 'matchList.html', context)
+
     return render(request, 'matchList.html', context)
