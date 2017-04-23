@@ -3,190 +3,50 @@
 <title> Profile Webpage</title>
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-
-
-
 <style>
- body {
+    .left-div {
+        float: left;
+        width:;
+        /*height: 20px;*/
+        margin-left:;
+        background-color: lightgray;
+        border-radius: 25px;
+        padding: 20px;
+    }
+    .flex-container {
+        flex-direction: column;
+        background: #cbd1db;
+    }
 
-
-	background-image: url("beachBack.jpg");
-
-
-   }
-    
-
+    .flex-item {
+        background-color:;
+        border-radius: 10px;
+        padding: 1px; 
+        order:<integer>;
+        flex-grow: <number>;
+        flex-shrink: <number>;
+        width: ;
+        height: ;
+        margin-left: 200px;
+    }
 
 </style>
 
+</head>
 
-
-
-   
-	<body>
-        <form method="POST">
-        {% csrf_token %}
-            	<div class="jumbotron">
-
-
-                	<div class="row">
-              	<!-- <h1></h1> -->
-              	<!-- <p></p> -->
-             	 
-                      	<div class="pull-left">
-                      	<p><a class="btn btn-primary btn-lg" href="#" role="button"><font size="100">Create Event</font></a></p>
-                    	</div>
-                    	<div class="pull-right">
-                      	<p><a class="btn btn-primary btn-lg" href="#" role="button"><font size="100">Join Event</font></a></p>
-                    	</div>
-
-
-                 	</div>
-                 	<div class="row">
-  <div class="col-lg-6">
-	<div class="input-group">
-  	<span class="input-group-addon">
-    	<input type="checkbox" aria-label="..."><font size="3"> Machine Learning
-   	</span>
-   	</div><!-- /input-group -->
-    	</div><!-- /.col-lg-6 -->
-  	 
-  <br>
-  <div class="col-lg-6">
-	<div class="input-group">
-  	<span class="input-group-addon">
-   	<input type="checkbox" aria-label="..."><font size="3"> Web Development
-   	</span>
-   	</div><!-- /input-group -->
-  </div><!-- /.col-lg-6 -->
-
-
-   <br>
-  <div class="col-lg-6">
-	<div class="input-group">
-  	<span class="input-group-addon">
-   	<input type="checkbox" aria-label="..."><font size="3"> Game Development
-   	</span>
-   	</div><!-- /input-group -->
-  </div><!-- /.col-lg-6 -->
-
-
-   <br>
-  <div class="col-lg-6">
-	<div class="input-group">
-  	<span class="input-group-addon">
-   	<input type="checkbox" aria-label="..."><font size="3"> Raspberry Pi
-   	</span>
-   	</div><!-- /input-group -->
-  </div><!-- /.col-lg-6 -->
-
-
-   <br>
-  <div class="col-lg-6">
-	<div class="input-group">
-  	<span class="input-group-addon">
-   	<input type="checkbox" aria-label="..."><font size="3"> Drone
-   	</span>
-   	</div><!-- /input-group -->
-  </div><!-- /.col-lg-6 -->
-
-
-
-
-   <br>
-  <div class="col-lg-6">
-	<div class="input-group">
-  	<span class="input-group-addon">
-   	<input type="checkbox" aria-label="..."><font size="3"> Virtual Reality
-   	</span>
-   	</div><!-- /input-group -->
-  </div><!-- /.col-lg-6 -->
-
-
-
-
-   <br>
-  <div class="col-lg-6">
-	<div class="input-group">
-  	<span class="input-group-addon">
-   	<input type="checkbox" aria-label="..."><font size="3"> Arduino
-   	</span>
-   	</div><!-- /input-group -->
-  </div><!-- /.col-lg-6 -->
-
-
-   <br>
-  <div class="col-lg-6">
-	<div class="input-group">
-  	<span class="input-group-addon">
-   	<input type="checkbox" aria-label="..."><font size="3"> Front End
-   	</span>
-   	</div><!-- /input-group -->
-  </div><!-- /.col-lg-6 -->
-
-
-
-
-   <br>
-  <div class="col-lg-6">
-	<div class="input-group">
-  	<span class="input-group-addon">
-   	<input type="checkbox" aria-label="..."><font size="3"> Back End
-   	</span>
-   	</div><!-- /input-group -->
-  </div><!-- /.col-lg-6 -->
-
-
-
-
-   <br>
-  <div class="col-lg-6">
-	<div class="input-group">
-  	<span class="input-group-addon">
-   	<input type="checkbox" aria-label="..."><font size="3"> Artist
-   	</span>
-   	</div><!-- /input-group -->
-  </div><!-- /.col-lg-6 -->
-
-
-
-
-   <br>
-  <div class="col-lg-6">
-	<div class="input-group">
-  	<span class="input-group-addon">
-   	<input type="checkbox" aria-label="..."><font size="3"> IOS Apps
-   	</span>
-   	</div><!-- /input-group -->
-  </div><!-- /.col-lg-6 -->
-
-
-
-
-<br>
-  <div class="col-lg-6">
-	<div class="input-group">
-  	<span class="input-group-addon">
-   	<input type="checkbox" aria-label="..."><font size="3"> Android Apps
-   	</span>
-   	</div><!-- /input-group -->
-  </div><!-- /.col-lg-6 -->
-
-
-    
- 
-            	</div>
-                <input type="submit" value="Submit">
-
+<body style="background-color:gray">
+  <center><h1><font color="white">I'am Interested in</font></h1></center>
+  <br><br><hr><br>
+  <form method="post">
+      <div class="checkbox">
+          <center><label><input type="checkbox" value=""><font color="white">Machine Learning</font></label></center>
+      </div>
+      <center><input type="submit" class="btn btn-info" value="Submit Button"></center>
   </form>
-
-	</body>
-
-
+</body>
 
 
 </html>
-
 
 
 
