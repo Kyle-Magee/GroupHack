@@ -4,3 +4,5 @@ GroupHack/settings\.py
 Matchup/__pycache__/
 
 GroupHack/__pycache__/
+
+Matchup/migrations/__pycache__/

@@ -54,14 +54,19 @@
 	<div class="right-div">
 		<strong><h1><font color="black">&nbsp;&nbsp;&nbsp;&nbsp;<u><em>List of Matches:</em></u></font></h1></strong>
 		<form method="post">
-			<div class="checkbox">
-		          &nbsp;&nbsp;<label><input type="checkbox" value=""><font color="white"><em>Candidate (N)</em></font></label>
+			{% for c in users %}
+		          &nbsp;&nbsp;<label><input type="checkbox" value=""><font color="white"><em>{{ c.name }}</em></font></label>
 		          	<ul>
-			    		<li>Email:</li>
-			    		<li>Interestes:</li>
-			    		<li>Preferred Languages:</li>
-			    		<li>Preferred Project Level:</li>
+			    		<li>{{ c.email }}</li>
+						{% for interest in c.interests.all %}
+						<li>{{ interest }}</li>
+						{% endfor %}
+						{% for language in i.languages.all %}
+						<li>{{ language }}<li>
+						{% endfor %}
+			    		<li>{{ c.project_level }}</li>
 			    	</ul>
+					{% endfor %}
 			</div>
 		</form>
 	</div>

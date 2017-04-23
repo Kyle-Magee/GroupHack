@@ -19,9 +19,9 @@ class User(models.Model):
     def __str__(self):
         return self.email
 
-    BEGINNER = 'BE'
-    INTERMEDIATE = 'INT'
-    ADVANCED = 'ADV'
+    BEGINNER = 'Beginner'
+    INTERMEDIATE = 'Intermediate'
+    ADVANCED = 'Advanced'
 
     project_level_choices = (
         (BEGINNER, 'Beginner'),

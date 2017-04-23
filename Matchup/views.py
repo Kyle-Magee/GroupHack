@@ -54,4 +54,4 @@ def show_users(request):
     context = {
         'users':users
     }
-    return render(request, 'show_users.html', context)
+    return render(request, 'matchList.html', context)
