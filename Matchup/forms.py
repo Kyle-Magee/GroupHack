@@ -20,4 +20,16 @@ class UserLanguagesForm(ModelForm):
         fields = ['languages']
 
 class UserNameForm(ModelForm):
-    
+    class Meta:
+        model = User
+        fields = ['name']
+
+class UserEmailForm(ModelForm):
+    class Meta:
+        model = User
+        fields = ['email']
+
+class UserProjectLevelForm(ModelForm):
+    class Meta:
+        model = User
+        fields = ['project_level']
