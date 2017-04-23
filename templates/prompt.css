@@ -1,0 +1,41 @@
+#image {
+  margin-top: 50px;
+  margin-right: 10px;
+  text-align: center;
+  position: relative;
+}
+body{
+  background-image: url('background.png');
+}
+body{
+  background: #c2f0f0;
+  background-image: url('background.png');
+}
+.container-fluid h2
+{
+  font: font-family: 'Abel', sans-serif;
+  margin-left:90px;
+}
+.container-fluid
+{
+  margin-top: 0px;
+  width:375px;
+  height: 350px;
+  background: #efefef;
+  padding: 10px;
+  border-radius: 10px;
+}
+.form-group
+{
+  width: 350px;
+}
+.btn-group
+{
+  margin-top:10px;
+}
+.btn-lg
+{
+  margin-left:10px;
+  margin-top:5px;
+  width:350px;
+}
