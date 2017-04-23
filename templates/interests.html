@@ -37,11 +37,13 @@
 <body style="background-color:gray">
   <center><h1><font color="white">I'am Interested in</font></h1></center>
   <br><br><hr><br>
-  <form method="post">
-      <div class="checkbox">
-          <center><label><input type="checkbox" value=""><font color="white">Machine Learning</font></label></center>
-      </div>
-      <center><input type="submit" class="btn btn-info" value="Submit Button"></center>
+  <form method="POST">
+      {% csrf_token %}
+      {{ interest_form }}
+      <br/>
+      {{ lang_form }}
+      <br/>
+      <input type="submit" class="btn btn-info" value="Submit Button">
   </form>
 </body>
 

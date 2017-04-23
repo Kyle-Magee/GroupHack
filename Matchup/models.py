@@ -15,6 +15,10 @@ class Interest(models.Model):
         return self.interest_name
     
 class User(models.Model):
+
+    def __str__(self):
+        return self.email
+
     BEGINNER = 'BE'
     INTERMEDIATE = 'INT'
     ADVANCED = 'ADV'
@@ -31,3 +35,4 @@ class User(models.Model):
     project_level = models.CharField(max_length=13, 
                                         choices=project_level_choices,
                                         default=BEGINNER)
+                    

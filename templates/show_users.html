@@ -1,0 +1,11 @@
+{% for i in users %}
+{{ i.name }}
+<br/>
+{{ i.email }}
+<br/>
+{% for language in i.languages.all %}{{ language }}<br/>{% endfor %}
+<br/>
+{% for interest in i.interests.all %}{{ interest }}<br/>{% endfor %}
+<br/>
+<p>-----------</p>
+{% endfor %}
